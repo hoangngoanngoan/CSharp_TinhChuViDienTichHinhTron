@@ -45,7 +45,7 @@
             label1.Font = new Font("Tahoma", 22F, FontStyle.Bold);
             label1.Location = new Point(12, 9);
             label1.Name = "label1";
-            label1.Size = new Size(800, 36);
+            label1.Size = new Size(990, 45);
             label1.TabIndex = 0;
             label1.Text = "ỨNG DỤNG TÍNH CHU VI VÀ DIỆN TÍCH HÌNH TRÒN";
             // 
@@ -54,7 +54,7 @@
             label2.AutoSize = true;
             label2.Location = new Point(25, 96);
             label2.Name = "label2";
-            label2.Size = new Size(117, 33);
+            label2.Size = new Size(149, 41);
             label2.TabIndex = 1;
             label2.Text = "Bán kính";
             // 
@@ -63,7 +63,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(25, 167);
             label4.Name = "label4";
-            label4.Size = new Size(106, 33);
+            label4.Size = new Size(134, 41);
             label4.TabIndex = 3;
             label4.Text = "Kết quả";
             // 
@@ -71,7 +71,7 @@
             // 
             txtBK.Location = new Point(218, 89);
             txtBK.Name = "txtBK";
-            txtBK.Size = new Size(227, 40);
+            txtBK.Size = new Size(227, 48);
             txtBK.TabIndex = 4;
             // 
             // butTinh
@@ -88,43 +88,45 @@
             // 
             butCV.Location = new Point(25, 300);
             butCV.Name = "butCV";
-            butCV.Size = new Size(220, 54);
+            butCV.Size = new Size(242, 54);
             butCV.TabIndex = 7;
             butCV.Text = "Tính Chu Vi";
             butCV.UseVisualStyleBackColor = true;
+            butCV.Click += butCV_Click;
             // 
             // butDT
             // 
             butDT.Location = new Point(335, 300);
             butDT.Name = "butDT";
-            butDT.Size = new Size(207, 54);
+            butDT.Size = new Size(273, 54);
             butDT.TabIndex = 8;
             butDT.Text = "Tính Diện Tích";
             butDT.UseVisualStyleBackColor = true;
+            butDT.Click += butDT_Click;
             // 
             // butThoat
             // 
             butThoat.Location = new Point(655, 300);
             butThoat.Name = "butThoat";
-            butThoat.Size = new Size(118, 54);
+            butThoat.Size = new Size(174, 54);
             butThoat.TabIndex = 9;
             butThoat.Text = "Thoát";
             butThoat.UseVisualStyleBackColor = true;
+            butThoat.Click += butThoat_Click;
             // 
             // labKQ
             // 
             labKQ.AutoSize = true;
             labKQ.Location = new Point(218, 167);
             labKQ.Name = "labKQ";
-            labKQ.Size = new Size(85, 33);
+            labKQ.Size = new Size(0, 41);
             labKQ.TabIndex = 10;
-            labKQ.Text = "label3";
             // 
             // HinhTron
             // 
-            AutoScaleDimensions = new SizeF(15F, 33F);
+            AutoScaleDimensions = new SizeF(18F, 40F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(810, 459);
+            ClientSize = new Size(1006, 459);
             Controls.Add(labKQ);
             Controls.Add(butThoat);
             Controls.Add(butDT);

@@ -12,7 +12,6 @@ namespace CSharp_TinhChuViDienTichHinhTron
         private double bk;
         const double pi = 3.14;
 
-        
         private void GetInfo()
         {
             bk = Convert.ToDouble(txtBK.Text);
@@ -27,19 +26,42 @@ namespace CSharp_TinhChuViDienTichHinhTron
             }
             catch
             {
-                MessageBox.Show("Phải nhập số","Thông Báo",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                MessageBox.Show("Phải nhập số", "Thông Báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
-        private void TinhCV()
+
+        private string TinhCV()
         {
             GetInfo();
-            labKQ.Text = "Chu vi: " + bk * pi; 
+            return labKQ.Text = "Chu vi: " + bk * pi + Environment.NewLine;
         }
+
+        private string TinhDT()
+        {
+            GetInfo();
+            return labKQ.Text = "Diện tích: " + bk * bk * pi + Environment.NewLine;
+        }
+
         private void butTinh_Click(object sender, EventArgs e)
         {
-            if (CheckInfo())  TinhCV();
-            
+            if (CheckInfo())
+                labKQ.Text = TinhCV() + TinhDT();     
+        }
+
+        private void butCV_Click(object sender, EventArgs e)
+        {
+            if (CheckInfo()) TinhCV();
+        }
+
+        private void butDT_Click(object sender, EventArgs e)
+        {
+            if (CheckInfo()) TinhDT();
+        }
+
+        private void butThoat_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
